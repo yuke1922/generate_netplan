@@ -19,6 +19,6 @@ network:
             addresses: """
 
 #print(netplan_block_1)
-string = netplan_block_1 + ip_addr + "/" + netmask + "\n            gateway: " + gateway + "\n" + "            nameservers:\n                addresses: [" + dns + "]\n"
+string = netplan_block_1 + "[" + ip_addr + "/" + netmask + "]\n            gateway4: " + gateway + "\n" + "            nameservers:\n                addresses: [" + dns + "]\n"
 #print(string)
 os.system("echo " + '"' + string + '"' + " > newfile.txt")
